@@ -1,5 +1,5 @@
 <template>
-	<el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" theme="dark" router>
+	<el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" theme="light" router>
 		<el-submenu index="1">
 			<template slot="title">导航一</template>
 			<el-menu-item index="/login">登录</el-menu-item>
@@ -10,32 +10,38 @@
 			<el-menu-item index="/prod-config">产品配置</el-menu-item>
 		</el-submenu>
 		<el-submenu index="2">
-			<template slot="title">产品管理</template>
-			<el-menu-item-group title="国内">
-				<el-menu-item index="/production">国内游</el-menu-item>
-				<el-menu-item index="/production">国内自由行</el-menu-item>
-				<el-menu-item index="/production">国内目的地参团</el-menu-item>
+			<template slot="title">产品中心</template>
+			<el-menu-item-group title="产品库">
+				<el-menu-item index="/production">旅游产品管理</el-menu-item>
+				<el-menu-item index="/production">玩乐产品管理</el-menu-item>
+				<el-menu-item index="/production">酒店产品管理</el-menu-item>
+				<el-menu-item index="/production">自由行产品管理</el-menu-item>
 			</el-menu-item-group>
-			<el-menu-item-group title="境外">
-				<el-menu-item index="/production">出境游</el-menu-item>
-				<el-menu-item index="/production">赴台游</el-menu-item>
-				<el-menu-item index="/production">出境自由行</el-menu-item>
-				<el-menu-item index="/production">境外目的地参团</el-menu-item>
-			</el-menu-item-group>
-			<el-menu-item-group title="其他">
-				<el-menu-item index="/production">周边游</el-menu-item>
-				<el-menu-item index="/production">玩乐</el-menu-item>
-				<el-menu-item index="/production">房掌柜</el-menu-item>
+			<el-menu-item-group title="产品配置">
+				<el-menu-item index="/production">航班管理</el-menu-item>
+				<el-menu-item index="/production">签证维护</el-menu-item>
+				<el-menu-item index="/production">玩乐产品价格类型管理</el-menu-item>
 			</el-menu-item-group>
 		</el-submenu>
 		<el-submenu index="3">
-			<template slot="title">订单管理</template>
-			<el-menu-item index="/orders">订单管理</el-menu-item>
+			<template slot="title">保险中心</template>
+			<el-menu-item index="/insurance-order">保险订单</el-menu-item>
 		</el-submenu>
 		<el-submenu index="4">
-			<template slot="title">其他</template>
-			<el-menu-item index="/optional-service">可选服务</el-menu-item>
+			<template slot="title">合同中心</template>
+			<el-menu-item index="/contract-order">合同订单</el-menu-item>
 		</el-submenu>
+		<el-submenu index="5">
+			<template slot="title">订单中心</template>
+			<el-menu-item index="/orders">订单管理</el-menu-item>
+		</el-submenu>
+		<el-submenu index="6">
+			<template slot="title">帐户中心</template>
+			<el-menu-item-group title="个人设置">
+				<el-menu-item index="/account/info">个人信息</el-menu-item>
+			</el-menu-item-group>
+		</el-submenu>
+		
     </el-menu>
 </template>
 

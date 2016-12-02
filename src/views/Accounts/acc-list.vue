@@ -1,7 +1,7 @@
 <template>
   <el-table
     :data="tableData"
-    height="600"
+    height="300"
     stripe
     style="width: 100%">
     <el-table-column

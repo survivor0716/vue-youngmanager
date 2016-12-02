@@ -1,16 +1,21 @@
 <template>
   <div class="index">
-    <el-row type="flex" class="row-bg">
-        <el-col :span="24" class="header">
-          <my-header></my-header>
-        </el-col>
+    <el-row type="flex" :align="middle">
+      <el-col class="header">
+        <my-header></my-header>
+      </el-col>
     </el-row>
-    <el-row class="row-bg main">
-      <el-col :span="4"  class="sidebar">
+    <el-row class="main">
+      <el-col :span="3" class="sidebar">
         <my-sidebar></my-sidebar>
       </el-col>
-      <el-col :span="20" class="views">
+      <el-col :span="21" class="views">
         <router-view></router-view>
+      </el-col>
+    </el-row>
+    <el-row>
+      <el-col class="footer">
+        <my-footer></my-footer>
       </el-col>
     </el-row>
   </div>
@@ -19,12 +24,14 @@
 <script>
 import MyHeader from '../components/header'
 import MySidebar from '../components/sidebar'
+import MyFooter from '../components/footer'
 
 export default {
   name: 'index',
   components: {
     MyHeader,
-    MySidebar
+    MySidebar,
+    MyFooter
   },
   data () {
     return {
@@ -38,25 +45,34 @@ export default {
 <style scoped>
 .index {
   height: 100%;
-  overflow-y: hidden;
 }
 
 .header {
   height: 60px;
-  background-color: #324057;
+  background-color: #2f373a;
 }
 
 .main {
   height: 100%;
-  margin-top: 60px;
-  top: -60px;
-
+  padding-top: 120px;
+  margin-top: -120px;
 }
 
 .sidebar {
   height: 100%;
   overflow-y: auto;
-  background-color: #324057;
+  background-color: #eff2f7;
   text-align: left;
+}
+
+.footer {
+  background-color: #a8aaa9;
+  color: #333;
+}
+
+.views {
+  height: 100%;
+  padding: 20px;
+  overflow: auto;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
-	<div class="logo">
-		Logo + something else
+	<div>
+		<p>Footer</p>
 	</div>
 </template>
 
@@ -19,7 +19,5 @@ export default {
 </script>
 
 <style scoped>
-.logo {
-  color: #ccc;
-}
+
 </style>
