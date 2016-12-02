@@ -48,6 +48,10 @@ const routes = [
                 component: ProductConfig,
             }
         ]
+    },
+    {
+        path: '*',
+        redirect: '/'
     }
 ]
 export default routes;
