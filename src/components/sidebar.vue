@@ -9,8 +9,33 @@
 			<el-menu-item index="/distributor">分销商管理</el-menu-item>
 			<el-menu-item index="/prod-config">产品配置</el-menu-item>
 		</el-submenu>
-		<el-menu-item index="2">导航二</el-menu-item>
-		<el-menu-item index="3">导航三</el-menu-item>
+		<el-submenu index="2">
+			<template slot="title">产品管理</template>
+			<el-menu-item-group title="国内">
+				<el-menu-item index="/production">国内游</el-menu-item>
+				<el-menu-item index="/production">国内自由行</el-menu-item>
+				<el-menu-item index="/production">国内目的地参团</el-menu-item>
+			</el-menu-item-group>
+			<el-menu-item-group title="境外">
+				<el-menu-item index="/production">出境游</el-menu-item>
+				<el-menu-item index="/production">赴台游</el-menu-item>
+				<el-menu-item index="/production">出境自由行</el-menu-item>
+				<el-menu-item index="/production">境外目的地参团</el-menu-item>
+			</el-menu-item-group>
+			<el-menu-item-group title="其他">
+				<el-menu-item index="/production">周边游</el-menu-item>
+				<el-menu-item index="/production">玩乐</el-menu-item>
+				<el-menu-item index="/production">房掌柜</el-menu-item>
+			</el-menu-item-group>
+		</el-submenu>
+		<el-submenu index="3">
+			<template slot="title">订单管理</template>
+			<el-menu-item index="/orders">订单管理</el-menu-item>
+		</el-submenu>
+		<el-submenu index="4">
+			<template slot="title">其他</template>
+			<el-menu-item index="/optional-service">可选服务</el-menu-item>
+		</el-submenu>
     </el-menu>
 </template>
 

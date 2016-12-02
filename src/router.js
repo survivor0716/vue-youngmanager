@@ -12,6 +12,12 @@ import Distributor from './views/Distributors/distributors.vue'
 
 import ProductConfig from './views/ProductConfig/product-config.vue'
 
+import Production from './views/Production/production.vue'
+
+import OptionalService from './views/OptionalService/optional-service.vue'
+
+import Orders from './views/Orders/orders.vue'
+
 const routes = [
     {
         path: '/login',
@@ -46,7 +52,22 @@ const routes = [
                 path: 'prod-config',
                 name: 'prod-config',
                 component: ProductConfig,
-            }
+            },
+            {
+                path: 'production',
+                name: 'production',
+                component: Production,
+            },
+            {
+                path: 'optional-service',
+                name: 'optional-service',
+                component: OptionalService,
+            },
+            {
+                path: 'orders',
+                name: 'orders',
+                component: Orders,
+            },
         ]
     },
     {

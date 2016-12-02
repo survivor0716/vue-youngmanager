@@ -6,7 +6,7 @@
         </el-col>
     </el-row>
     <el-row class="row-bg main">
-      <el-col :span="4" class="sidebar">
+      <el-col :span="4"  class="sidebar">
         <my-sidebar></my-sidebar>
       </el-col>
       <el-col :span="20" class="views">
@@ -57,5 +57,6 @@ export default {
   height: 100%;
   overflow-y: auto;
   background-color: #324057;
+  text-align: left;
 }
 </style>
