@@ -37,6 +37,10 @@ const routes = [
                 path: 'accounts',
                 name: 'accounts',
                 component: Accounts,
+                beforeEnter: (to, from, next) => {
+                    console.log('in router.js ', to)
+                    next()
+                }
             },
             {
                 path: 'provider',
@@ -75,4 +79,4 @@ const routes = [
         redirect: '/'
     }
 ]
-export default routes;
+export default routes

@@ -22,15 +22,24 @@ import AccPagination from './acc-pagination'
 
 export default {
   name: 'accounts',
+  data () {
+    return {
+
+    }
+  },
   components: {
     AccSearch,
     AccList,
     AccPagination
   },
-  data () {
-    return {
-
-    }
+  beforeRouteEnter (to, from, next) {
+    console.log('accounts.vue beforeRouteEnter')
+    next(vm => {
+      console.log('accounts.vue next')
+    })
+  },
+  created () {
+    console.log('accounts.vue created')
   }
 }
 </script>
