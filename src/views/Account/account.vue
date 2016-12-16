@@ -1,23 +1,23 @@
 <template>
   <index :menuData="menuData">
-
+    <router-view></router-view>
   </index>
 </template>
 
 <script>
 import Index from '../../components/index'
 
-// TODO: 获取顶栏、边栏菜单数据
-
+// 获取顶栏、边栏菜单数据
+import AccMenuData from './acc-menu-data.js'
 
 export default {
-  name: 'contract',
+  name: 'account',
   components: {
     Index
   },
   data () {
     return {
-      menuData: {}
+      menuData: AccMenuData
     }
   }
 }

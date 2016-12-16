@@ -1,14 +1,15 @@
 <template>
   <div>
-    Orders 页面相关内容
+    <main-title>个人信息</main-title>
   </div>
 </template>
 
 <script>
+import MainTitle from '../../../components/main-title'
 export default {
-  name: 'orders',
+  name: 'acc-myinfo',
   components: {
-
+    MainTitle
   },
   data () {
     return {

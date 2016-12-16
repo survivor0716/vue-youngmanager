@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: 'prod-title',
+  name: 'main-title',
   components: {
 
   },

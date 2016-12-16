@@ -7,17 +7,17 @@
     </el-row>
     <el-row class="nav">
       <el-col>
-        <my-header></my-header>
+        <my-top-menu></my-top-menu>
       </el-col>
     </el-row>
     <el-row class="main">
       <el-card>
         <el-row>
           <el-col :span="3" class="sidebar">
-            <my-sidebar :sidebar-data="sidebarData"></my-sidebar>
+            <my-sidebar :sidebar-data="menuData.sidebar"></my-sidebar>
           </el-col>
           <el-col :span="21" class="views">
-            <router-view></router-view>
+            <slot>没有分发任何内容</slot>
           </el-col>
         </el-row>
       </el-card>
@@ -31,15 +31,14 @@
 </template>
 
 <script>
-import MyHeader from '../components/header'
-import MySidebar from '../components/sidebar'
-import MyFooter from '../components/footer'
-// 获取顶栏、边栏菜单数据
-import accData from './Accounts/accounts-menu-data.js'
+import MyHeader from './header'
+import MyTopMenu from './top-menu'
+import MySidebar from './sidebar'
+import MyFooter from './footer'
 
 export default {
   name: 'index',
-  props: ['routeData'],
+  props: ['menuData'],
   data () {
     return {
       headerData: null,
@@ -50,6 +49,7 @@ export default {
   },
   components: {
     MyHeader,
+    MyTopMenu,
     MySidebar,
     MyFooter
   },
@@ -60,15 +60,13 @@ export default {
   *   我们可以在接下来的组件的beforeRouteEnter 钩子中获取数据，当数据获取成功后只调用 next 方法。
   **/
   beforeRouteEnter (to, from, next) {
-    console.log('index.vue beforeRouteEnter')
+    // console.log('index.vue beforeRouteEnter')
     next(vm => {
-      console.log('index.vue next')
-      vm.headerData = accData.header
-      vm.sidebarData = accData.sidebar
+      // console.log('index.vue next')
     })
   },
   created () {
-    console.log('index.vue created', this.routeData)
+    // console.log('index.vue created', this.menuData)
   }
 }
 </script>
@@ -87,7 +85,7 @@ export default {
 
 .nav {
   height: 60px;
-  background-color: #fff;
+  background-color: #eff2f7;
   z-index: 1;
 }
 
@@ -100,8 +98,10 @@ export default {
 
 .main .el-card {
   width: 1600px;
+  min-height: 800px;
   margin: 30px auto 0;
   padding: 0;
+  overflow: auto;
 }
 
 .main .el-card .el-row {

@@ -1,23 +1,19 @@
 <template>
-  <index :menuData="menuData">
-
-  </index>
+  <div>
+    <main-title>自由行产品管理</main-title>
+  </div>
 </template>
 
 <script>
-import Index from '../../components/index'
-
-// TODO: 获取顶栏、边栏菜单数据
-
-
+import MainTitle from '../../../components/main-title'
 export default {
-  name: 'contract',
+  name: 'prod-free',
   components: {
-    Index
+    MainTitle
   },
   data () {
     return {
-      menuData: {}
+
     }
   }
 }

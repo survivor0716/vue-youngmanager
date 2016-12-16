@@ -1,14 +1,14 @@
 <template>
   <index :menuData="menuData">
-
+    <router-view></router-view>
   </index>
 </template>
 
 <script>
 import Index from '../../components/index'
 
-// TODO: 获取顶栏、边栏菜单数据
-
+// 获取顶栏、边栏菜单数据
+import ContractMenuData from './contract-menu-data.js'
 
 export default {
   name: 'contract',
@@ -17,7 +17,7 @@ export default {
   },
   data () {
     return {
-      menuData: {}
+      menuData: ContractMenuData
     }
   }
 }

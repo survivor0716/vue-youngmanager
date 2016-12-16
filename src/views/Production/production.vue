@@ -1,33 +1,29 @@
 <template>
-  <div>
-    <prod-title></prod-title>
-
-    <prod-search></prod-search>
-
-    <prod-list></prod-list>
-    <acc-list></acc-list>
-  </div>
+  <index :menuData="menuData">
+    <router-view></router-view>
+  </index>
 </template>
 
 <script>
-import ProdTitle from './prod-title.vue'
-import ProdSearch from './prod-search.vue'
-import ProdList from './prod-list.vue'
+import Index from '../../components/index'
+import ProdTitle from './prod-title'
+import ProdSearch from './prod-search'
+import ProdList from './prod-list'
 
-//temp
-import AccList from '../Accounts/acc-list.vue'
+// 获取顶栏、边栏菜单数据
+import ProdMenuData from './prod-menu-data.js'
 
 export default {
   name: 'production',
   components: {
+    Index,
     ProdTitle,
     ProdSearch,
-    ProdList,
-    AccList
+    ProdList
   },
   data () {
     return {
-
+      menuData: ProdMenuData
     }
   }
 }
